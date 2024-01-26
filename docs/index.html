@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XB3PR2Y1TQ');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AToM: Amortized Text-to-Mesh using 2D Diffusion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
+
+
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta property="og:site_name" content="AToM: Amortized Text-to-Mesh using 2D Diffusion" />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:title" content="AToM: Amortized Text-to-Mesh using 2D Diffusion" />
+    <meta property="og:description" content="AToM: Amortized Text-to-Mesh using 2D Diffusion, 2023." />
+
+    <script src="assets/js/video_comparison.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <div class="highlight-clean" style="padding-bottom: 10px;">
+        <div class="container" style="max-width: col-sm-12;"></div>
+            <div class="row">
+            <div class="col-sm-6 d-flex align-items-center" style="flex-direction: column;">
+
+            </div>
+            </div>
+        </div>
+
+        <div class="container" style="max-width: col-sm-12;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <video src="assets/banner.mp4" autoplay loop muted
+                    type="video/mp4" style="width: 100%; height: auto;"></video>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="max-width: 100%;">
+            <br>
+            <h1 class="text-center"><img src="assets/logo.png" style="height: 1em;"/> AToM: Amortized Text-to-Mesh using 2D Diffusion</h1>
+            <br>
+        </div>
+
+        <div class="container author-container">
+            <div class="row authors">
+                <div class="col">
+                    <h5><a href="https://guochengqian.github.io/">Guocheng
+                            Qian<sup>1,2</sup> </a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://research.snap.com/team/team-member.html#junli-cao">Junli Cao<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a class="text-center"
+                            href="https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/">Aliaksandr Siarohin<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a class="text-center" href="https://yashkant.github.io/">Yash Kant<sup>1,3</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a class="text-center"
+                            href="https://mightychaos.github.io/">Chaoyang Wang<sup>1</sup></a></h5>
+                </div>
+            </div>
+            <div class="row authors">
+                <div class="col">
+                    <h5><a href="https://www.linkedin.com/in/waytobehigh/">Michael Vasilkovsky<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="http://hsinyinglee.com/">Hsin-Ying
+                            Lee<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://yuwfan.github.io/">Yuwei Fan<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://universome.github.io/">Ivan
+                            Skorokhodov<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://payeah.net/">Peiye Zhuang<sup>1</sup></a></h5>
+                </div>
+
+            </div>
+            <div class="row authors">
+                <div class="col">
+                    <h5><a href="https://www.gilitschenski.org/igor/">Igor Gilitschenski<sup>3</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://alanspike.github.io/">Jian
+                            Ren<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://www.bernardghanem.com/">Bernard
+                            Ghanem<sup>2</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="https://kfiraberman.github.io/">Kfir Aberman<sup>1</sup></a></h5>
+                </div>
+                <div class="col">
+                    <h5><a href="http://www.stulyakov.com/">Sergey
+                            Tulyakov<sup>1</sup></a></h5>
+                </div>
+            </div>
+            <div class="row affiliations">
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>1</sup>Snap Inc.</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>2</sup>King Abdullah University of Science and
+                            Technology (KAUST)</a></h6>
+                </div>
+                <div class="col">
+                    <h6 class="text-center"><a class="text-center"><sup>3</sup>University of Toronto</a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container align-items-center">
+        <div class="row text-center mx-auto">
+            <div class="col-sm-6">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" class="link-block w-inline-block">
+                    <img src="assets/media/arxiv_paper.png" alt="paper" class="img-fluid" style="height:100px" /></a>
+                <br>
+                <div class="text-block-2"><strong class="bold-text-nerf_v2">Arxiv</strong></div>
+            </div>
+            <div class="col-sm-6">
+                <a href="https://github.com/snap-research/AToM" target="_blank" class="link-block w-inline-block">
+                    <img src="assets/media/github.png" alt="github" class="img-fluid" style="height:100px" /></a>
+                <br>
+                <div class="text-block-2"><strong class="bold-text-nerf_v2">Code</strong></div>
+            </div>
+        </div>
+    </div>
+
+        <hr class="divider" />
+        <div class="container" style="max-width: col-sm-12;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>Abstract</h2>
+                    <p style="text-align: justify">
+                        We introduce Amortized Text-to-Mesh (AToM), a feed-forward text-to-mesh framework optimized across multiple text prompts simultaneously. In contrast to existing text-to-3D methods that often entail time-consuming per-prompt optimization and commonly output representations other than polygonal meshes, AToM directly generates high-quality textured meshes in less than 1 second in inference with around 10 times reduction in the training cost, and generalizes to unseen prompts. Our key idea is a novel triplane-based text-to-mesh architecture with a two-stage training strategy that ensures stable optimization and scalability. Through extensive experiments on various prompt benchmarks, AToM significantly outperforms state-of-the-art amortized approaches with over 4 times higher accuracy (in DF415 dataset) and more distinguishable and higher-quality 3D outputs. AToM demonstrates strong generalizability, offering finegrained details of 3D content for unseen interpolated prompts, unlike per-prompt solutions. 
+                    </p>
+                </div>
+                <div class="col-sm-12">
+                    <h2>Method</h2>
+                    <img src="assets/pipeline.png" style="max-width: 100%;"/>
+                    <p style="text-align: justify">
+                       AToM proposes a triplane-based text-to-mesh architecture with a two-stage amortized optimization training that ensures stable optimization and scalability. AToM is optimized through score distillation sampling without 3D data. 
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr class="divider" />
+        <div class="container">
+            <h2>Interpolation Experiments </h2>
+            <p>AToM generalizes to unseen interpolated prompts. Comparing AToM to AToM Per-Prompt on the Pig64 compositional prompt set in the format of ``a pig {activity} {theme}'', where each row and column represent a different activity and theme. Models are trained using 56 prompts and tested on all prompts, while the 8 unseen testing prompts are evaluated on the diagonal. </p>
+            <div class="row">
+                <div class="col-sm-6 d-flex align-items-center" style="flex-direction: column;">
+                    <video id="speed025" src="assets/video/atom-pig64-compressed.mp4" autoplay loop playsinline muted
+                        type="video/mp4" style="width: 100%; height: auto;"></video>
+                    <p> AToM generalizes to unseen prompts (diagonal from left up to right down) </p>
+                </div>
+                <div class="col-sm-6 d-flex align-items-center" style="flex-direction: column;">
+                    <img src="assets/video/atom-pig-perprompt.jpg" style="max-width: 100%;"/>
+                    <br>
+                    <p> Per-prompt text-to-3D cannot generalize and yields low consistency </p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider" />
+        <div class="container">
+            <h2> Main Results </h2>
+            <p>AToM offers high-quality textured meshes in less than 1 second in inference. Here we show the results of AToM in DF415 dataset. </p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <video id="speed025" src="assets/main-results.mp4" autoplay loop playsinline muted
+                        type="video/mp4" style="width: 100%; height: auto;"></video>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <hr class="divider" />
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 d-flex align-items-center" style="flex-direction: column;">
+                    <img src="assets/df415.jpg" style="max-width: 100%;"/>
+                </div>
+            </div>
+        </div> -->
+
+        
+        <!-- Footer -->
+        <hr class="divider" />
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column is-8">
+                        <div class="content">
+                            <p>
+                                This website is licensed under a <a rel="license"
+                                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                            </p>
+                            <p>
+                                We borrow the <a href="https://dreamfusion3d.github.io/">source code</a> for our
+                                website.
+                                We sincerely appreciate DreamFusion authors for their awesome templates.
+                                <!-- we just ask that you link back to this page in the footer.
+                            Please remember to remove the analytics code included in the header of the website which
+                            you do not want on your website. -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+        <script src="assets/js/yall.js"></script>
+        <script>
+            yall({
+                observeChanges: true
+            });
+        </script>
+        <script src="assets/js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js">
+        </script>
+        <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+        <!-- Import the component -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var video = document.getElementById('speed025');
+                video.playbackRate = 0.1; // Play at half speed
+            });
+        </script>
+        
+</body>
+
+</html>

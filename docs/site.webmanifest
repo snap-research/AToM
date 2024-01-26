@@ -1,0 +1,12 @@
+{
+    "name": "AToM: Amortized Text-to-Mesh using 2D Diffusion ",
+    "short_name": "AToM",
+    "icons": [{
+        "src": "assets/logo.png",
+        "sizes": "290x288",
+        "type": "image/png"
+    }],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
