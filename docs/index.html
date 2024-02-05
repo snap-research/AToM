@@ -58,7 +58,7 @@
         <div class="container" style="max-width: col-sm-12;">
             <div class="row">
                 <div class="col-sm-12">
-                    <video src="assets/banner.mp4" autoplay loop muted
+                    <video src="assets/banner-compressed.mp4" autoplay loop muted
                     type="video/mp4" style="width: 100%; height: auto;"></video>
                 </div>
             </div>
@@ -149,7 +149,7 @@
     <div class="container align-items-center">
         <div class="row text-center mx-auto">
             <div class="col-sm-6">
-                <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" class="link-block w-inline-block">
+                <a href="https://arxiv.org/abs/2402.00867" target="_blank" class="link-block w-inline-block">
                     <img src="assets/media/arxiv_paper.png" alt="paper" class="img-fluid" style="height:100px" /></a>
                 <br>
                 <div class="text-block-2"><strong class="bold-text-nerf_v2">Arxiv</strong></div>
@@ -185,11 +185,11 @@
 
         <hr class="divider" />
         <div class="container">
-            <h2>Interpolation Experiments </h2>
+            <h2>Interpolation Experiments on Pig64</h2>
             <p>AToM generalizes to unseen interpolated prompts. Comparing AToM to AToM Per-Prompt on the Pig64 compositional prompt set in the format of ``a pig {activity} {theme}'', where each row and column represent a different activity and theme. Models are trained using 56 prompts and tested on all prompts, while the 8 unseen testing prompts are evaluated on the diagonal. </p>
             <div class="row">
                 <div class="col-sm-6 d-flex align-items-center" style="flex-direction: column;">
-                    <video id="speed025" src="assets/video/atom-pig64-compressed.mp4" autoplay loop playsinline muted
+                    <video id='speed025' src="assets/video/atom-pig64.mp4" autoplay loop playsinline muted
                         type="video/mp4" style="width: 100%; height: auto;"></video>
                     <p> AToM generalizes to unseen prompts (diagonal from left up to right down) </p>
                 </div>
@@ -197,6 +197,14 @@
                     <img src="assets/video/atom-pig-perprompt.jpg" style="max-width: 100%;"/>
                     <br>
                     <p> Per-prompt text-to-3D cannot generalize and yields low consistency </p>
+                </div>
+            </div>
+
+            <h2>Interpolation Experiments on Animal2400</h2>
+            <p> Train on only 300 prompts, AToM generalizes to 2400 interpolated prompts. Here we show part of them. See the consistent identity, orientation, and quality. </p>
+            <div class="row">
+                <div class="col-sm-12 d-flex align-items-center" style="flex-direction: column;">
+                    <img src="assets/AToM_animal2400.png" style="max-width: 100%;"/>
                 </div>
             </div>
         </div>
@@ -207,7 +215,7 @@
             <p>AToM offers high-quality textured meshes in less than 1 second in inference. Here we show the results of AToM in DF415 dataset. </p>
             <div class="row">
                 <div class="col-sm-12">
-                    <video id="speed025" src="assets/main-results.mp4" autoplay loop playsinline muted
+                    <video id="speed025" src="assets/main-results-compressed.mp4" autoplay loop playsinline muted
                         type="video/mp4" style="width: 100%; height: auto;"></video>
                 </div>
             </div>
